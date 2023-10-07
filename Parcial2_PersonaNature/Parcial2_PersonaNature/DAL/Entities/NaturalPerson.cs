@@ -19,10 +19,7 @@ namespace Parcial2_PersonaNature.DAL.Entities
         [Display(Name = "Ingrese el Año de Nacimiento")]
         public int BirthYear { get; set; }
 
-        
-        //public int Age { get; set; }
-
-
+        public int Age { get; set; }
         #endregion
 
     }

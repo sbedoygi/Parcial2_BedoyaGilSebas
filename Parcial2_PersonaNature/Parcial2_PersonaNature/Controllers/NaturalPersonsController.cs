@@ -61,7 +61,8 @@ namespace Parcial2_PersonaNature.Controllers
             if (ModelState.IsValid)
             {
                 naturalPerson.id = Guid.NewGuid();
-                naturalPerson.Age= calculatedate(naturalPerson.BirthYear);
+                naturalPerson.Age= CalculateAge(naturalPerson.BirthYear);
+                naturalPerson.CreatedDate = DateTime.Now;
                 _context.Add(naturalPerson);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -101,6 +102,7 @@ namespace Parcial2_PersonaNature.Controllers
             {
                 try
                 {
+                    naturalPerson.ModifiedDate = DateTime.Now;
                     _context.Update(naturalPerson);
                     await _context.SaveChangesAsync();
                 }
@@ -165,7 +167,7 @@ namespace Parcial2_PersonaNature.Controllers
         }
 
 
-        private int calculatedate( int bornYear)
+        private int CalculateAge(int bornYear)
         {
             DateTime currentDate = DateTime.Now;
             DateTime bornDate = new DateTime(bornYear, 01, 01);
