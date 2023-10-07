@@ -20,7 +20,7 @@ namespace Parcial2_PersonaNature.DAL.Entities
         public int BirthYear { get; set; }
 
         
-        public int Age { get; set; }
+        //public int Age { get; set; }
 
 
         #endregion
