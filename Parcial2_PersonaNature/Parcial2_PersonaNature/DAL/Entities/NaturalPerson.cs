@@ -8,7 +8,7 @@ namespace Parcial2_PersonaNature.DAL.Entities
     {
         #region
         [Required(ErrorMessage = "El campo {0} es obligatorio")]
-        [Display(Name = "Nombre Completo")]
+        [Display(Name = "ingrese el Nombre Completo")]
         public string FullName { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es obligatorio")]
